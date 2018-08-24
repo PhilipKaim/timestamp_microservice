@@ -18,6 +18,7 @@ app.get('/api/timestamp/:date', (req, res) => {
     if (timestamp.indexOf('-') > -1) {
         validate(timestamp);
     } else {
+        // converted from seconds to milliseconds for date constructor
         validate(timestamp * 1000);
     }
 
