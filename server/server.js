@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 2000;
 
 app.get('/api/timestamp/:date', (req, res) => {
     let timestamp = req.params.date;
@@ -46,3 +46,5 @@ app.get('/api/timestamp', (req, res) => {
 app.listen(port, () => {
     console.log(`started on port ${port}`);
 });
+
+module.exports = { app }
