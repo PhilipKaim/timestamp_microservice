@@ -1,0 +1,32 @@
+/* style reset */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* global */
+body {
+    text-align: center;
+    background: #eeeeef;
+}
+
+/* semantic elements */
+header {
+    margin-top: 30px;
+}
+
+main {
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    background: #fff;
+    margin: 60px 20px;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+a {
+    display: block;
+    margin: 10px 0;
+}
