@@ -1,10 +1,13 @@
 const express = require('express');
 
 const app = express();
+const publicPath = path.join(__dirname, '..', 'views');
 const port = process.env.PORT || 2000;
 
-app.get('/', (req, res) => {
-    res.sendFile('..' + __dirname, 'index.html');
+app.use(express.static(publicPath));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(publicPath, 'index.html'));
 });
 
 app.get('/api/timestamp/:date', (req, res) => {
